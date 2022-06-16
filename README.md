@@ -15,6 +15,8 @@
 
 E-commerce website from [FreeCodeCamp](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=PL_U5mRW0SoP3ekwozd40G-6Q4WQCBWSsn&index=3) Flask youtube course.
 
+Stopped at 17:45 / 6:21:03.
+
 ## What is my motivation?
 
 I want to consolidate Flask framework doing some bigger app.
