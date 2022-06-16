@@ -30,8 +30,6 @@ I want to consolidate Flask framework doing some bigger app.
 
 ## Technologies & Documentation
 
-```Delete unnecessary```
-
 - [Python 3](https://docs.python.org/3/)
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
 - [SQLite3](https://www.sqlite.org/docs.html)
