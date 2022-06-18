@@ -2,6 +2,8 @@
 
 # FlaskCourseFCC
 
+```In progress```
+
 ## Table of contents:
 
 - [The aim of the project](#the-aim-of-the-project)
@@ -15,7 +17,7 @@
 
 E-commerce website from [FreeCodeCamp](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=PL_U5mRW0SoP3ekwozd40G-6Q4WQCBWSsn&index=3) Flask youtube course.
 
-Stopped at 17:45 / 6:21:03.
+Stopped at 1:42:42 / 6:21:03.
 
 ## What is my motivation?
 
@@ -25,8 +27,11 @@ I want to consolidate Flask framework doing some bigger app.
 
 ```In progress```
 
-- [x] Done feature
-- [ ] Not finished feature
+- [x] Listing default items,
+- [ ] Functionality of buttons on market site,
+- [x] Created base.html and other pages are extends from base,
+- [x] Added functionality for buttons on navbar (which are redirecting to Home and Market pages),
+- [x] Created a SQLite3 database to store items,
 
 ## Technologies & Documentation
 
@@ -139,6 +144,38 @@ git clone <repo url>      # to clone this repository into your local machine
 python3 market.py    # using MacOS
 python market.py     # using Windows
 ```
+</details>
+
+<details>
+<summary>Useful commands:</summary>
+
+```
+Creating a database:
+Write creating script (app.config, db variable) and than type (in projects terminal):
+python          # on Windows
+python3         # on MacOS
+
+db.create_all()
+
+Than db file should appear in your projects directory.
+```
+
+```
+Creating items in db:
+Keep your Python shell opened (like above) and type:
+
+from <python_file_name> import <model_name>     # Let Python know what model you are going to pass into db. In my case it's going to be like: from market import Item
+item1 = <model_name>(<args>)                    # Create variables (as a good practise) , than pass db.Model and args. In my case: item1 = Item(name='IPhone 10', price=500, barcode='123456789012', description='Desc')
+
+db.session.add(item1)                           # Add item into db
+db.session.commit()                             # Save the item in database
+
+Verify db content:
+
+<model_name>.query.all()                        # Check if you did it right and you have item in your db. In my case: Item.query.all()
+```
+
+
 </details>
 
 And that's it! Great job!
