@@ -13,12 +13,13 @@
 - [Installation](#installation)
 - [Run](#run)
 - [Useful commands](#useful-commands)
+- [Useful packages](#useful-packages)
 
 ## The aim of the project
 
 E-commerce website from [FreeCodeCamp](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=PL_U5mRW0SoP3ekwozd40G-6Q4WQCBWSsn&index=3) Flask youtube course.
 
-Stopped at 2:25:37 / 6:21:03.
+Stopped at 2:52:12 / 6:21:03.
 
 ## What is my motivation?
 
@@ -34,6 +35,8 @@ I want to consolidate Flask framework doing some bigger app.
 - [x] Created a SQLite3 database to store items,
 - [x] Listing items from database,
 - [x] Added user model which can own items,
+- [x] Created register page,
+- [ ] Added functionality of creating user,
 
 ## Technologies & Documentation
 
@@ -242,6 +245,34 @@ item1.owner = User.query.filter_by(username='Wojtek').first().id        # Import
 db.session.add(item1)
 db.session.commit()
 ```
+
+</details>
+
+## Useful packages:
+
+<details>
+
+<summary>Flask-wtf</summary>
+
+```
+pip3 install flask-wtf  # on MacOS
+pip install flask-wtf   # on Windows
+```
+
+It's a package which helps us creating nice-looking forms.
+
+</details>
+
+<details>
+
+<summary>WTForms</summary>
+
+```
+pip3 install wtforms    # on MacOS
+pip install wtforms     # on Windows
+```
+
+WTForms is a flexible forms validation and rendering library for Python web development. It can work with whatever web framework and template engine you choose.
 
 </details>
 
