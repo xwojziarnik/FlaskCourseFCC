@@ -37,10 +37,24 @@
             </ul>
         </div>
     </nav>
-      {% block content %}
+    <!--get_flashed_messages is printing errors messages on web page. The output is an tuple with two args: category of message and content of the error-->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+      {% endwith %}
 
+      {% block content %}
+        <!-- Future Content here -->
       {% endblock %}
-      <!-- Future Content here -->
+
 
 
 

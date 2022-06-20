@@ -36,7 +36,9 @@ I want to consolidate Flask framework doing some bigger app.
 - [x] Listing items from database,
 - [x] Added user model which can own items,
 - [x] Created register page,
-- [ ] Added functionality of creating user,
+- [x] Added functionality of creating user,
+- [x] Added validators of user's data,
+- [x] Added functionality to display on website registrations errors,
 
 ## Technologies & Documentation
 
@@ -186,26 +188,6 @@ Than db file should appear in your projects directory.
 
 <details>
 
-<summary>Creating items in db:</summary>
-
-```
-Keep your Python shell opened (like above) and type:
-
-from <python_file_name> import <model_name>     # Let Python know what model you are going to pass into db. In my case it's going to be like: from market import Item
-item1 = <model_name>(<args>)                    # Create variables (as a good practise) , than pass db.Model and args. In my case: item1 = Item(name='IPhone 10', price=500, barcode='123456789012', description='Desc')
-
-db.session.add(item1)                           # Add item into db
-db.session.commit()                             # Save the item in database
-
-Verify db content:
-
-<model_name>.query.all()                        # Check if you did it right and you have item in your db. In my case: Item.query.all()
-```
-
-</details>
-
-<details>
-
 <summary>Delete (drop) all information from your database:</summary>
 
 ```
@@ -261,6 +243,8 @@ pip install flask-wtf   # on Windows
 
 It's a package which helps us creating nice-looking forms.
 
+[Documentation](https://flask-wtf.readthedocs.io/en/1.0.x/)
+
 </details>
 
 <details>
@@ -273,6 +257,23 @@ pip install wtforms     # on Windows
 ```
 
 WTForms is a flexible forms validation and rendering library for Python web development. It can work with whatever web framework and template engine you choose.
+
+[Pypi documentation](https://pypi.org/project/WTForms/)
+
+</details>
+
+<details>
+
+<summary>E-mail validator:</summary>
+
+```
+pip3 install email-validator    # on MacOS
+pip install email-validator     # on Windows
+```
+
+A robust email address syntax and deliverability validation library for Python by Joshua Tauberer.
+
+[Pypi documentation](https://pypi.org/project/email-validator/)
 
 </details>
 
