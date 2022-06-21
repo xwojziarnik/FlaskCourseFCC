@@ -153,8 +153,8 @@ We've seen how to run venv. Keep that running!
 git init                  # to initialize repository
 git clone <repo url>      # to clone this repository into your local machine
 
-python3 market.py    # using MacOS
-python market.py     # using Windows
+python3 run.py    # using MacOS
+python run.py     # using Windows
 ```
 </details>
 
