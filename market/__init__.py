@@ -1,6 +1,7 @@
 import json
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 
@@ -12,5 +13,7 @@ with open('/Users/wojciechziarnik/Desktop/DEV/FlaskCourseFCC/market/secret_key.j
     secret_key = json.load(secret_file)
 
 app.config['SECRET_KEY'] = secret_key['SECRET_KEY']
+
+bcrypt = Bcrypt(app)
 
 from market import routes

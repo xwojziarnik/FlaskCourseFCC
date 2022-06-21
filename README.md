@@ -39,6 +39,9 @@ I want to consolidate Flask framework doing some bigger app.
 - [x] Added functionality of creating user,
 - [x] Added validators of user's data,
 - [x] Added functionality to display on website registrations errors,
+- [x] Checking for unique usernames and email addresses while registering new accounts,
+- [x] Hashing users passwords using @getter & @setter
+
 
 ## Technologies & Documentation
 
@@ -230,6 +233,37 @@ db.session.commit()
 
 </details>
 
+<details>
+
+<summary>Creating a secret key using Python shell:</summary>
+
+**Remember not to upload your secret keys on repository!**
+
+1. Open your Python shell typing in terminal/command prompt:
+```
+python3     # using MacOS
+python      # using Windows
+```
+
+2. Import os package:
+```
+import os
+```
+
+3. Create a secret key:
+```
+os.urandom(lenght_of_secret_key).hex()
+```
+
+Example:
+```
+>>> import os
+>>> os.urandom(12).hex()
+'290cc5f5b736307fe61623d9'
+```
+
+</details>
+
 ## Useful packages:
 
 <details>
@@ -274,6 +308,21 @@ pip install email-validator     # on Windows
 A robust email address syntax and deliverability validation library for Python by Joshua Tauberer.
 
 [Pypi documentation](https://pypi.org/project/email-validator/)
+
+</details>
+
+<details>
+
+<summary>Flask-Bcrypt</summary>
+
+```
+pip3 install flask_bcrypt       # using MacOS
+pip install flask_bcrypt        # using Windows
+```
+
+Flask-Bcrypt is a Flask extension that provides bcrypt hashing utilities for your application.
+
+[PyPi documentation](https://pypi.org/project/Flask-Bcrypt/)
 
 </details>
 
