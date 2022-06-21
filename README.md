@@ -19,7 +19,7 @@
 
 E-commerce website from [FreeCodeCamp](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=PL_U5mRW0SoP3ekwozd40G-6Q4WQCBWSsn&index=3) Flask youtube course.
 
-Stopped at 3:28:35 / 6:21:03.
+Stopped at 3:59:53 / 6:21:03.
 
 ## What is my motivation?
 
@@ -41,6 +41,7 @@ I want to consolidate Flask framework doing some bigger app.
 - [x] Added functionality to display on website registrations errors,
 - [x] Checking for unique usernames and email addresses while registering new accounts,
 - [x] Hashing users passwords using @getter & @setter
+- [x] Login page & form
 
 
 ## Technologies & Documentation
@@ -235,7 +236,7 @@ db.session.commit()
 
 <details>
 
-<summary>Creating a secret key using Python shell:</summary>
+<summary>Generate a secret key using Python shell:</summary>
 
 **Remember not to upload your secret keys on repository!**
 
