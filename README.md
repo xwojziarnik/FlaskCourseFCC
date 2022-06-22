@@ -19,7 +19,7 @@
 
 E-commerce website from [FreeCodeCamp](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=PL_U5mRW0SoP3ekwozd40G-6Q4WQCBWSsn&index=3) Flask youtube course.
 
-Stopped at 3:59:53 / 6:21:03.
+Stopped at 4:45:17 / 6:21:03.
 
 ## What is my motivation?
 
@@ -41,7 +41,12 @@ I want to consolidate Flask framework doing some bigger app.
 - [x] Added functionality to display on website registrations errors,
 - [x] Checking for unique usernames and email addresses while registering new accounts,
 - [x] Hashing users passwords using @getter & @setter
-- [x] Login page & form
+- [x] Login page & form,
+- [x] Login functionality,
+- [x] Displaying on navbar login/register if user isn't logged in, else app displays welcome string and logout href,
+- [x] Displaying budget in a pretty way before username,
+- [x] Logout functionality,
+- [x] User can get into market page only when he's logged in,
 
 
 ## Technologies & Documentation
@@ -299,7 +304,7 @@ WTForms is a flexible forms validation and rendering library for Python web deve
 
 <details>
 
-<summary>E-mail validator:</summary>
+<summary>E-mail-Validator:</summary>
 
 ```
 pip3 install email-validator    # on MacOS
@@ -324,6 +329,21 @@ pip install flask_bcrypt        # using Windows
 Flask-Bcrypt is a Flask extension that provides bcrypt hashing utilities for your application.
 
 [PyPi documentation](https://pypi.org/project/Flask-Bcrypt/)
+
+</details>
+
+<details>
+
+<summary>Flask-Login</summary>
+
+```
+pip3 install flask_login        # on MacOS
+pip install flask_login         # on Windows
+```
+
+Flask-Login provides user session management for Flask. It handles the common tasks of logging in, logging out, and remembering your users' sessions over extended periods of time.
+
+[PyPi documentation](https://pypi.org/project/Flask-Login/)
 
 </details>
 
