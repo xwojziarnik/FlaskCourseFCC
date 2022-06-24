@@ -2,13 +2,12 @@
 
 # FlaskCourseFCC
 
-```In progress```
-
 ## Table of contents:
 
 - [The aim of the project](#the-aim-of-the-project)
 - [What is my motivation?](#what-is-my-motivation)
 - [Features](#features)
+- [Future Features](#future-features)
 - [Technologies & Documentation](#technologies--documentation)
 - [Installation](#installation)
 - [Run](#run)
@@ -19,17 +18,13 @@
 
 E-commerce website from [FreeCodeCamp](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=PL_U5mRW0SoP3ekwozd40G-6Q4WQCBWSsn&index=3) Flask youtube course.
 
-Stopped at 4:45:17 / 6:21:03.
-
 ## What is my motivation?
 
 I want to consolidate Flask framework doing some bigger app.
 
 ## Features
 
-```In progress```
-
-- [ ] Functionality of buttons on market site,
+- [x] Functionality of buttons on market site,
 - [x] Created base.html and other pages are extends from base,
 - [x] Added functionality for buttons on navbar (which are redirecting to Home and Market pages),
 - [x] Created a SQLite3 database to store items,
@@ -47,6 +42,12 @@ I want to consolidate Flask framework doing some bigger app.
 - [x] Displaying budget in a pretty way before username,
 - [x] Logout functionality,
 - [x] User can get into market page only when he's logged in,
+- [x] User can buy stuff from market,
+- [x] User can sell stuff back into market
+
+## Future Features
+
+- [ ] Adding stuff into market
 
 
 ## Technologies & Documentation
@@ -55,6 +56,7 @@ I want to consolidate Flask framework doing some bigger app.
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
 - [SQLite3](https://www.sqlite.org/docs.html)
 - [SQLite3 browser](https://sqlitebrowser.org/dl/)
+- [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
 ## Installation
 
@@ -144,8 +146,6 @@ pip install <package_name>      # on Windows
 </details>
 
 </details>
-
-Perfect! Now, it's time to last episode.
 
 ##  Run
 
