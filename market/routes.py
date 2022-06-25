@@ -1,7 +1,7 @@
 from market import app, db
 from flask import render_template, redirect, url_for, flash, request
 from market.models import Item, User
-from market.forms import RegisterForm, LoginForm, PurchaseItemForm, SellItemForm
+from market.forms import RegisterForm, LoginForm, PurchaseItemForm, SellItemForm, SellYourOwnItem
 from flask_login import login_user, logout_user, login_required, current_user
 
 
@@ -94,3 +94,27 @@ def logout_page():
     logout_user()
     flash("You have been logged out!", category='info')
     return redirect(url_for('home_page'))
+
+
+@app.route('/add-item', methods=["GET", "POST"])
+@login_required
+def sell_your_own_item():
+    form = SellYourOwnItem()
+    if form.validate_on_submit():
+        item_to_create = Item(name=form.name.data,
+                              price=form.price.data,
+                              barcode=form.barcode.data,
+                              description=form.description.data)
+
+        try:
+            db.session.add(item_to_create)
+            db.session.commit()
+            User.budget += item_to_create.price
+
+            flash(f"Congratulations! You sold {item_to_create.name} for {item_to_create.price}$!", category='success')
+            return redirect(url_for('market_page'))
+
+        except:
+            flash("Oopsie! Something went wrong.", category='danger')
+
+    return render_template('add_item.html', form=form)
