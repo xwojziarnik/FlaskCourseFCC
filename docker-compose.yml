@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./market
+    container_name: market
+    restart: always
+    environment:
+      - APP_NAME=ECommerceMarket
+    expose:
+      - 5000

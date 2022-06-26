@@ -1,0 +1,4 @@
+/env
+/.idea
+/market/__pycache__/
+/market/secret_key.json
