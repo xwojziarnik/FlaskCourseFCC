@@ -53,9 +53,9 @@ class SellItemForm(FlaskForm):
     submit = SubmitField(label='Sell Item!')
 
 
-class SellYourOwnItem(FlaskForm):
+class AddYourOwnItem(FlaskForm):
     name = StringField(label='Name of the Item')
     price = IntegerField(label='Price of the Item')
     barcode = IntegerField(label='Barcode of the Item')
     description = StringField(label='Description of the Item')
-    submit = SubmitField(label='Sell your Item')
+    submit = SubmitField(label='Add your Item')

@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Sell your item
+  Add your item
 {% endblock %}
 
 {% block content %}
 <body class="text-center">
   <div class="container">
-    <form method="POST" class="form-sellyourownitem" style="color:white">
+    <form method="POST" class="form-AddYourOwnItem" style="color:white">
       {{ form.hidden_tag() }}
       <h1 class="h3 mb-3 font-weight-normal">
-                Sell your Item
+                Add your Item
       </h1>
 
       {{ form.name.label() }}

@@ -1,7 +1,7 @@
 from market import app, db
 from flask import render_template, redirect, url_for, flash, request
 from market.models import Item, User
-from market.forms import RegisterForm, LoginForm, PurchaseItemForm, SellItemForm, SellYourOwnItem
+from market.forms import RegisterForm, LoginForm, PurchaseItemForm, SellItemForm, AddYourOwnItem
 from flask_login import login_user, logout_user, login_required, current_user
 
 
@@ -99,7 +99,7 @@ def logout_page():
 @app.route('/add-item', methods=["GET", "POST"])
 @login_required
 def sell_your_own_item():
-    form = SellYourOwnItem()
+    form = AddYourOwnItem()
     if form.validate_on_submit():
         item_to_create = Item(name=form.name.data,
                               price=form.price.data,
@@ -109,9 +109,8 @@ def sell_your_own_item():
         try:
             db.session.add(item_to_create)
             db.session.commit()
-            User.budget += item_to_create.price
 
-            flash(f"Congratulations! You sold {item_to_create.name} for {item_to_create.price}$!", category='success')
+            flash(f"Congratulations! You added {item_to_create.name} into a market!", category='success')
             return redirect(url_for('market_page'))
 
         except:
